@@ -205,7 +205,7 @@ SSH into the control node and follow the steps below:
 5. sudo docker start (name of container)
 6. `sudo docker attach (name of container)` or `sudo docker exec -it (name of container) bash` (this one will stay open even when exit so it is good if you are going back and forth between containers)
 7. cd /etc/ansible
-8. Update hosts file with ELK IP and change the `remote user` to your chosen one in `/etc/ansible/hosts' 
+8. Update hosts file with ELK IP and change the `remote user` to your chosen one in `/etc/ansible/hosts` 
 ```
 [elk]
 10.1.0.4 ansible_python_interpreter=/usr/bin/python3
