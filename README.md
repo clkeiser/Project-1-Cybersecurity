@@ -130,6 +130,7 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
+
 `Web-1: 10.0.0.8`
 
 `Web-2: 10.0.0.9`
