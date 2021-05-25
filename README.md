@@ -149,7 +149,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 - Copy the configuration file to your webservers and ELK server.
-- Update the /etc/ansible/hosts file to include the internal IP addresses.
+- Update the `/etc/ansible/hosts` file to include the internal IP addresses.
 ```
 # This is the default ansible 'hosts' file.
 #
@@ -172,7 +172,7 @@ SSH into the control node and follow the steps below:
 [elk]
 10.1.0.4 ansible_python_interpreter=/usr/bin/python3
 ```
-- Run the playbook, and navigate to http://[your.ELK-VMExternal.IP]:5601/app/kibana to check that the installation worked as expected.
+- Run the playbook, and navigate to `http://[your.ELK-VMExternal.IP]:5601/app/kibana` to check that the installation worked as expected.
 - Which file is the playbook? Where do you copy it?
   
    The playbook is [filebeat-config](https://github.com/clkeiser/Project-1-Cybersecurity/blob/main/Ansible/filebeat-config.yml)
