@@ -8,7 +8,9 @@ These files have been tested and used to generate a live ELK deployment on Azure
 entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
   [Install Elk](https://github.com/clkeiser/Project-1-Cybersecurity/blob/main/Ansible/install-elk.yml)
+ 
   [Filebeat Playbook](https://github.com/clkeiser/Project-1-Cybersecurity/blob/main/Ansible/filebeat-playbook.yml)
+  
   [Metricbeat Playbook](https://github.com/clkeiser/Project-1-Cybersecurity/blob/main/Ansible/metricbeat-playbook.yml)
 
 This document contains the following details:
