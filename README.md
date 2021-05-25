@@ -221,7 +221,7 @@ SSH into the control node and follow the steps below:
 4. curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat >> /etc/ansible/filebeat-config.yml
 5. cp etc/ansible/filebeat-config.yml /etc/filebeat/filebeat-config.yml
 6. cd `/etc/filebeat/filebeat-config.yml`
-7. nano or vi into filebeat-config.yml
+7. nano or vi into [filebeat-config.yml](https://github.com/clkeiser/Project-1-Cybersecurity/blob/main/Ansible/filebeat-config.yml)
 8. edit (for faster searching in nano use CTRL_W) :
 ```
 output.elasticsearch:
@@ -233,7 +233,7 @@ setup.kibana:
 host: "ELKPrivateIP"
 ```
 9. Save file
-10. Create filebeat-playbook.yml
+10. Create [filebeat-playbook.yml](https://github.com/clkeiser/Project-1-Cybersecurity/blob/main/Ansible/filebeat-playbook.yml)
 ```
 ---
 - name: Installing and Launch Filebeat
@@ -275,7 +275,7 @@ host: "ELKPrivateIP"
 4. curl https://gist.githubusercontent.com/slape/58541585cc1886d2e26cd8be557ce04c/raw/0ce2c7e744c54513616966affb5e9d96f5e12f73/metricbeat >> /etc/ansible/metric-config.yml
 5. cp etc/ansible/metricbeat-config.yml /etc/metricbeat/metricbeat-config.yml
 6. cd `/etc/metricbeat/metricbeat-config.yml`
-7. nano or vi into metricbeat-config.yml
+7. nano or vi into [metricbeat-config.yml](https://github.com/clkeiser/Project-1-Cybersecurity/blob/main/Ansible/metricbeat-config.yml)
 8. edit (for faster searching in nano use CTRL_W) :
 ```
 output.elasticsearch:
@@ -287,7 +287,7 @@ setup.kibana:
 host: "ELKPrivateIP"
 ```
 9. Save file
-10. Create metricbeat-playbook.yml
+10. Create [metricbeat-playbook.yml](https://github.com/clkeiser/Project-1-Cybersecurity/blob/main/Ansible/metricbeat-playbook.yml)
 ```
 ---
 - name: Installing and Launch Metricbeat
