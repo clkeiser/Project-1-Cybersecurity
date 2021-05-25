@@ -14,7 +14,7 @@ entire deployment pictured above. Alternatively, select portions of the playbook
   [Metricbeat Playbook](https://github.com/clkeiser/Project-1-Cybersecurity/blob/main/Ansible/metricbeat-playbook.yml)
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -30,7 +30,7 @@ Load balancing ensures that the application will be highly available, in additio
 Load balancing distributes the incoming traffic to ensure that there is continued availability to the web-servers. 
 
 What is the advantage of a Jump Box? The main advantage of a Jump-Box is to allow easy administration of many systems and to 
-provide and extra layer of security.
+provide an extra layer of security.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the event logs and system metrics.
 - Filebeat monitors specific log directories or log files, collects information and then logs the data. 
@@ -135,12 +135,12 @@ This ELK server is configured to monitor the following machines:
 
 `Web-2: 10.0.0.9`
 
-We have installed the following Beats on these machines:
+I have installed the following Beats on these machines:
 - Filebeat
 - Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- Filebeat collects auth logs (/var/log/auth.log), which can be used to monitor access attempts 
+- Filebeat collects auth logs (/var/log/auth.log), which can be used to monitor access attempts. 
 - Metricbeat collects metrics related to CPU, memory and running proccessing, which can be used to optimize the computer speed and efficiency and detect any unwanted breaches.
 
 
@@ -219,7 +219,7 @@ SSH into the control node and follow the steps below:
 2. ssh username@Jump-BoxPrivateIP
 3. ssh username@ELK-serverPrivateIP
 4. `curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat >> /etc/ansible/filebeat-config.yml`
-5. cp etc/ansible/filebeat-config.yml /etc/filebeat/filebeat-config.yml
+5. cp etc/ansible/filebeat-config.yml /etc/filebeat/filebeat-config.yml (copy file so there is backup in case you need to revert back)
 6. cd `/etc/filebeat/filebeat-config.yml`
 7. nano or vi into [filebeat-config.yml](https://github.com/clkeiser/Project-1-Cybersecurity/blob/main/Ansible/filebeat-config.yml)
 8. edit (for faster searching in nano use CTRL_W) :
@@ -273,7 +273,7 @@ host: "ELKPrivateIP"
 2. ssh username@Jump-BoxPrivateIP
 3. ssh username@ELK-serverPrivateIP
 4. `curl https://gist.githubusercontent.com/slape/58541585cc1886d2e26cd8be557ce04c/raw/0ce2c7e744c54513616966affb5e9d96f5e12f73/metricbeat >> /etc/ansible/metric-config.yml`
-5. cp etc/ansible/metricbeat-config.yml /etc/metricbeat/metricbeat-config.yml
+5. cp etc/ansible/metricbeat-config.yml /etc/metricbeat/metricbeat-config.yml (copy file so there is backup in case you need to revert back)
 6. cd `/etc/metricbeat/metricbeat-config.yml`
 7. nano or vi into [metricbeat-config.yml](https://github.com/clkeiser/Project-1-Cybersecurity/blob/main/Ansible/metricbeat-config.yml)
 8. edit (for faster searching in nano use CTRL_W) :
