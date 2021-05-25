@@ -174,10 +174,10 @@ SSH into the control node and follow the steps below:
 ```
 - Run the playbook, and navigate to http://[your.ELK-VMExternal.IP]:5601/app/kibana to check that the installation worked as expected.
 - Which file is the playbook? Where do you copy it?
-   
+```   
    The playbook is [filebeat-config](https://github.com/clkeiser/Project-1-Cybersecurity/blob/main/Ansible/filebeat-config.yml)
    You copy the file from /etc/ansible/files/filebeat-config.yml
-
+```
 - Which file do you update to make Ansible run the playbook on a specific machine? 
   `Update the hosts file in /etc/ansible/hosts`
 
@@ -192,6 +192,7 @@ SSH into the control node and follow the steps below:
   tasks:
   ```
 - Which URL do you navigate to in order to check that the ELK server is running?
+
 `http://[your.ELK-VMExternal.IP]:5601/app/kibana`
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
