@@ -176,7 +176,8 @@ SSH into the control node and follow the steps below:
 - Which file is the playbook? Where do you copy it?
   
    The playbook is [filebeat-config](https://github.com/clkeiser/Project-1-Cybersecurity/blob/main/Ansible/filebeat-config.yml)
-   'You copy the file from /etc/ansible/files/filebeat-config.yml'
+   
+   `You copy the file from /etc/ansible/files/filebeat-config.yml`
 
 - Which file do you update to make Ansible run the playbook on a specific machine? 
   
