@@ -35,7 +35,7 @@ provide and extra layer of security.
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the event logs and system metrics.
 - Filebeat monitors specific log directories or log files, collects information and then logs the data. 
 - Metricbeat collects metrics and statistics and sends them to things such as Logstash. The ouput data can then be viewed in 
-things such as Kibana. 
+  things such as Kibana. 
 
 The configuration details of each machine may be found below.
 
@@ -52,10 +52,10 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the Jump-Box-Provisioner machine can accept connections from the Internet. Access to this machine is only allowed from the 
 following IP addresses:
-- Catherine' Personal IP address
+`Catherine' Personal IP address`
 
 Machines within the network can only be accessed by Jump-Box-Provisioner.
-- The ELK-Server is only accessible by SSH from the Jump-Box-Provisioner and through web access from Catherine' Personal IP address
+The ELK-Server is only accessible by SSH from the Jump-Box-Provisioner and through web access from Catherine' Personal IP address
 
 A summary of the access policies in place can be found in the table below.
 
@@ -130,21 +130,24 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- Web-1: 10.0.0.8
-- Web-2: 10.0.0.9
+`Web-1: 10.0.0.8`
+
+`Web-2: 10.0.0.9`
 
 We have installed the following Beats on these machines:
 - Filebeat
 - Metricbeat
 
 These Beats allow us to collect the following information from each machine:
+- Filebeat collects auth logs (/var/log/auth.log), which can be used to monitor access attempts 
+- Metricbeat collects metrics related to CPU, memory and running proccessing, which can be used to optimize the computer speed and efficiency and detect any unwanted breaches.
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the configuration file to your webservers and ELK server. 
+- Copy the configuration file to your webservers and ELK server.
 - Update the /etc/ansible/hosts file to include the internal IP addresses.
 - Run the playbook, and navigate to http://[your.ELK-VMExternal.IP]:5601/app/kibana to check that the installation worked as expected.
 
