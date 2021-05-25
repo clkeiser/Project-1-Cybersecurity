@@ -2,12 +2,13 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
-
+![alt text](https://github.com/clkeiser/Project-1-Cybersecurity/blob/main/Diagrams/RedTeam%20Network%20with%20ELK%20Stack.png)
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the 
 entire deployment pictured above. Alternatively, select portions of the playbook file may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._
+  [Install Elk](https://github.com/clkeiser/Project-1-Cybersecurity/blob/main/Ansible/install-elk.yml)
+  [Filebeat Playbook](https://github.com/clkeiser/Project-1-Cybersecurity/blob/main/Ansible/filebeat-playbook.yml)
+  [Metricbeat Playbook](https://github.com/clkeiser/Project-1-Cybersecurity/blob/main/Ansible/metricbeat-playbook.yml)
 
 This document contains the following details:
 - Description of the Topologu
