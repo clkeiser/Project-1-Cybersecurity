@@ -140,7 +140,7 @@ I have installed the following Beats on these machines:
 - Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- Filebeat collects auth logs (/var/log/auth.log), which can be used to monitor access attempts. 
+- Filebeat collects auth logs `(/var/log/auth.log)`, which can be used to monitor access attempts. 
 - Metricbeat collects metrics related to CPU, memory and running proccessing, which can be used to optimize the computer speed and efficiency and detect any unwanted breaches.
 
 
@@ -199,12 +199,12 @@ SSH into the control node and follow the steps below:
 
 ### Steps to set up ELK server
 1. Open command prompt 
-2. ssh username@Jump-BoxPrivateIP
-3. sudo docker container list -a (to see what is running)
+2. `ssh username@Jump-BoxPrivateIP`
+3. `sudo docker container list -a` (to see what is running)
 4. Locate ansible container name
-5. sudo docker start (name of container)
+5. `sudo docker start (name of container)`
 6. `sudo docker attach (name of container)` or `sudo docker exec -it (name of container) bash` (this one will stay open even when exit so it is good if you are going back and forth between containers)
-7. cd /etc/ansible
+7. `cd /etc/ansible`
 8. Update hosts file with ELK IP and change the `remote user` to your chosen one in `/etc/ansible/hosts` 
 ```
 [elk]
@@ -212,16 +212,16 @@ SSH into the control node and follow the steps below:
 ```
 
 9. `ansible-playbook install-elk.yml` [install-ELK](https://github.com/clkeiser/Project-1-Cybersecurity/blob/main/Ansible/install-elk.yml)
-10. ssh username@ELK-serverPrivateIP
+10. `ssh username@ELK-serverPrivateIP`
 
 ### Steps to Installing filebeat
 1. open command prompt
-2. ssh username@Jump-BoxPrivateIP
-3. ssh username@ELK-serverPrivateIP
+2. `ssh username@Jump-BoxPrivateIP`
+3. `ssh username@ELK-serverPrivateIP`
 4. `curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat >> /etc/ansible/filebeat-config.yml`
-5. cp etc/ansible/filebeat-config.yml /etc/filebeat/filebeat-config.yml (copy file so there is backup in case you need to revert back)
-6. cd `/etc/filebeat/filebeat-config.yml`
-7. nano or vi into [filebeat-config.yml](https://github.com/clkeiser/Project-1-Cybersecurity/blob/main/Ansible/filebeat-config.yml)
+5. `cp etc/ansible/filebeat-config.yml /etc/filebeat/filebeat-config.yml` (copy file so there is backup in case you need to revert back)
+6. `cd /etc/filebeat/filebeat-config.yml`
+7. `nano or vi into [filebeat-config.yml](https://github.com/clkeiser/Project-1-Cybersecurity/blob/main/Ansible/filebeat-config.yml)`
 8. edit (for faster searching in nano use CTRL_W) :
 ```
 output.elasticsearch:
@@ -270,12 +270,12 @@ host: "ELKPrivateIP"
 
 ### Steps to Installing metricbeat
 1. open command prompt
-2. ssh username@Jump-BoxPrivateIP
-3. ssh username@ELK-serverPrivateIP
+2. `ssh username@Jump-BoxPrivateIP`
+3. `ssh username@ELK-serverPrivateIP`
 4. `curl https://gist.githubusercontent.com/slape/58541585cc1886d2e26cd8be557ce04c/raw/0ce2c7e744c54513616966affb5e9d96f5e12f73/metricbeat >> /etc/ansible/metric-config.yml`
-5. cp etc/ansible/metricbeat-config.yml /etc/metricbeat/metricbeat-config.yml (copy file so there is backup in case you need to revert back)
-6. cd `/etc/metricbeat/metricbeat-config.yml`
-7. nano or vi into [metricbeat-config.yml](https://github.com/clkeiser/Project-1-Cybersecurity/blob/main/Ansible/metricbeat-config.yml)
+5. `cp etc/ansible/metricbeat-config.yml /etc/metricbeat/metricbeat-config.yml` (copy file so there is backup in case you need to revert back)
+6. `cd /etc/metricbeat/metricbeat-config.yml`
+7. `nano or vi into [metricbeat-config.yml](https://github.com/clkeiser/Project-1-Cybersecurity/blob/main/Ansible/metricbeat-config.yml)`
 8. edit (for faster searching in nano use CTRL_W) :
 ```
 output.elasticsearch:
